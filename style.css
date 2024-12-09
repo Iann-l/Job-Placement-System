@@ -1,0 +1,203 @@
+/* Global Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0ce5c8, #12617a, #0ce50c); /* Sexy gradient background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+/* Full-width Container */
+.container, .tracking-container, .manage-container, .job-search-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 30px;
+    background: #74bef0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.container:hover, .tracking-container:hover, .manage-container:hover, .job-search-container:hover {
+    transform: translateY(-4px);
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #2079ff;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+/* Button Styling with Animation */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4caf50;
+    color: #83481f;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin: 10px 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    font-size: 1rem;
+    transform: scale(1);
+    animation: popIn 0.6s ease-out;
+}
+
+.btn:hover {
+    background-color: #07a9a3;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background-color: #07a9a3;
+}
+
+.delete-btn:hover {
+    background-color: #07a9a3;
+}
+
+.logout-btn {
+    background-color: #07a9a3;
+}
+
+.logout-btn:hover {
+    background-color: #07a9a3;
+}
+
+/* Job Listings, Inquiries, Resources with Card Hover Effect */
+.job-listing, .inquiry-item, .resource-item, .job-item {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(5, 211, 230, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: left;
+}
+
+.job-listing:hover, .inquiry-item:hover, .resource-item:hover, .job-item:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    background-color: #333;
+    color: #15d4fa;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Section Titles */
+h2, h3 {
+    color: #42e88d;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Form Styling */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"], form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    background-color: #4caf50;
+    color: white;
+}
+
